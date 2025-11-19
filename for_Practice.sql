@@ -12,4 +12,11 @@ where salary is null;
 select occupation , department_name 
 from employee_salary es  
 join parks_departments pd
-where es.dept_id = pd.department_id
+where es.dept_id = pd.department_id;
+
+-- Calculating Metrics with GROUP BY and Aggregates
+select salary,  count(salary) totalSalary, max(salary) Maxsalary, sum(salary) Totalrevenue
+from employee_salary
+where salary > 50000
+group by salary
+order by Totalrevenue;
