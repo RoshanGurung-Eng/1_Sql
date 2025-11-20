@@ -20,3 +20,16 @@ from employee_salary
 where salary > 50000
 group by salary
 order by Totalrevenue;
+
+-- Ranking employee by Salary within their category
+select employee_id, gender , age,
+-- Calculate the rank of salary within each category
+rank() over(
+		partition by gender
+        order by age desc
+) as rankinCategory,
+
+-- Calculate the difference from the average salary in the age
+age - avg(age) over (partition by gender) as salaryvsAgeavg
+from employee_demographics
+order by gender, rankinCategory; 
