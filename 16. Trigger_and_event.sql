@@ -8,4 +8,3 @@ from employee_salary;
 
 delimiter $$
 create trigger employee_insert
-af

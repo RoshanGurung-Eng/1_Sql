@@ -33,3 +33,15 @@ rank() over(
 age - avg(age) over (partition by gender) as salaryvsAgeavg
 from employee_demographics
 order by gender, rankinCategory; 
+
+-- Finding employee with Above-Average Salary (using CTE)
+with EmployeeTotalSalary as (
+select 
+	employee_id,
+    avg(salary) as Avg_salary
+from 
+	salary
+group by 
+	employee_id
+)
+
