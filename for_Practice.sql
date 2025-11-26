@@ -35,13 +35,18 @@ from employee_demographics
 order by gender, rankinCategory; 
 
 -- Finding employee with Above-Average Salary (using CTE)
-with EmployeeTotalSalary as (
-select 
-	employee_id,
-    avg(salary) as Avg_salary
-from 
-	salary
-group by 
-	employee_id
+-- Step 1: Calculate the overall average salary for all employees/records
+WITH OverallAverage AS (
+    SELECT 
+        AVG(salary) AS GlobalAvgSalary
+    FROM 
+        employee_salary
 )
-
+-- Step 2: Select the employee details whose salary is greater than the overall average
+SELECT 
+    e.employee_id,
+    e.salary
+FROM 
+    employee_salary e, OverallAverage oa  -- <-- FIX IS HERE
+WHERE 
+    e.salary > oa.GlobalAvgSalary;
