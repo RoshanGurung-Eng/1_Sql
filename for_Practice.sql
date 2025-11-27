@@ -47,6 +47,18 @@ SELECT
     e.employee_id,
     e.salary
 FROM 
-    employee_salary e, OverallAverage oa  -- <-- FIX IS HERE
+    employee_salary e, OverallAverage oa  
 WHERE 
     e.salary > oa.GlobalAvgSalary;
+    
+-- joining every table
+SELECT
+    ed.*, -- Selects all columns from employee_demographics
+    es.salary, -- Selects only the salary column from employee_salary
+    es.department_id -- Selects the department_id from employee_salary (assuming this is where it lives)
+FROM
+    employee_demographics AS ed
+-- Use an INNER JOIN for records that exist in both tables
+JOIN
+    employee_salary AS es
+    ON ed.employee_id = es.employee_id; -- The ON clause specifies the matching column
