@@ -55,3 +55,7 @@ select *
 from duplicate_CTE 
 WHERE row_num > 1;
 
+-- standirazation
+
+select 
+from
