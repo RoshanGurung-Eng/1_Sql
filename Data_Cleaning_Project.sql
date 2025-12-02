@@ -42,20 +42,25 @@ CREATE TABLE `layoffs_staging2` (
   `row_num` int
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-insert layoffs_staging2
-select *
-from layoffs;
+select * 
+from layoffs_staging2
+where row_num > 1;
 
-with duplicate_cte as (
+insert into layoffs_staging2
 select *,
 row_number() over(partition by company, location, industry, total_laid_off, percentage_laid_off, `date`, country, funds_raised ) as row_num
-from layoffs_staging
-)
+from layoffs_staging;
+
+delete
+from layoffs_staging2
+where row_num > 1;
+
 select *
-from duplicate_CTE 
-WHERE row_num > 1;
+from layoffs_staging2; 
 
--- standirazation
 
-select 
-from
+-- standirazing data
+select company, trim(company)
+from layoffs_staging2;
+
+
