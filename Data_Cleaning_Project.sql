@@ -93,5 +93,9 @@ set `date` = str_to_date(`date`, '%m/%d/%Y') ;
 alter table layoffs_staging2
 modify column `date` DATE;
 
+-- working with null and blank values
+
 select * 
 from layoffs_staging2;
+
+
