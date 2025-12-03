@@ -59,8 +59,28 @@ select *
 from layoffs_staging2; 
 
 
--- standirazing data
+-- standirazing data 
+-- finding issues and fixing them
+
 select company, trim(company)
 from layoffs_staging2;
 
+update layoffs_staging2
+set company = trim(company);
 
+select *
+from layoffs_staging2
+where industry like 'Crypto%';
+
+update layoffs_staging2
+set industry = 'Crypto'
+where industry like 'Crypto%';
+
+select distinct country, trim(trailing '.' from country)
+from layoffs_staging2
+where country like 'United States%'
+order by 1;
+
+update layoffs_staging2
+set country = trim(trailing '.' from country)
+where country like 'United States%'
