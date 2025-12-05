@@ -105,6 +105,10 @@ from layoffs_staging2
 where industry is null
 or industry = '';
 
+update layoffs_staging2
+set industry = null
+where industry = '';
+
 select *
 from layoffs_staging2
 where company = 'Appsmith'
