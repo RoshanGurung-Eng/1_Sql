@@ -56,3 +56,8 @@ select *
 from employee_demographics as ed
 inner join
 	employee_salary as es on ed.employee_id = es.employee_id
+  ;  
+    
+-- details of employee
+select count(*)
+from employee_demographics;
