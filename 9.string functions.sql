@@ -6,6 +6,8 @@ select first_name, length(first_name)
 from employee_demographics
 order by 2;
 
+select length ('Jhon Cena');
+
 -- 2.upper
 select upper('hulalala');
 select lower('LOWER');
