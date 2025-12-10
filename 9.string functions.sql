@@ -15,6 +15,9 @@ select lower('LOWER');
 select first_name, upper(first_name)
 from employee_demographics;
 
+select last_name, lower(last_name)
+from employee_demographics;
+
 -- 3.Trims, lefttrim and righttrin 
 select rtrim('           sky            ');
 
