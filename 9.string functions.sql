@@ -37,6 +37,8 @@ FROM employee_demographics;
 -- 6. Locate
 select locate('o','bobby');
 
+select locate ('a','fdsfdna du bist aba');
+
 select first_name, locate('an',first_name)
 FROM employee_demographics;
 
