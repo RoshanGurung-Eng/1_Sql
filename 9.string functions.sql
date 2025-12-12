@@ -42,6 +42,9 @@ select locate ('a','fdsfdna du bist aba');
 select first_name, locate('an',first_name)
 FROM employee_demographics;
 
+select last_name, locate('b',last_name)
+FROM employee_demographics;
+
 -- 7. Concat
 select first_name, last_name,
 concat (first_name,"",last_name) as fullname
