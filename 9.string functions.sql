@@ -31,7 +31,8 @@ substring(birth_date,6,2)
 from employee_demographics;
 
 -- 5.replace
-select first_name, replace(first_name,'a','z')
+select first_name, replace(first_name,'a','z') as z
+
 FROM employee_demographics;
 
 -- 6. Locate
