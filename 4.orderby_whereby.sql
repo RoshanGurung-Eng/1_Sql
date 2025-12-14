@@ -7,6 +7,10 @@ select gender, avg(age), max(age), min(age), count(age)
 from employee_demographics
 group by gender;
 
+select gender ,  avg(age) avg_age, max(age) as max_age, min(age) min_age
+from employee_demographics
+group by gender;
+
 select occupation, salary
 from employee_salary
 group by occupation, salary
