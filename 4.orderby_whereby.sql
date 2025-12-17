@@ -26,3 +26,7 @@ from employee_demographics
 order by gender, age
 ;
 
+select *
+from employee_salary
+order by 5,4
+
