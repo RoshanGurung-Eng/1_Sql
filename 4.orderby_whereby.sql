@@ -28,5 +28,10 @@ order by gender, age
 
 select *
 from employee_salary
-order by 5,4
+order by 5,4;
+
+select *
+from employee_salary
+order by salary
+;
 
