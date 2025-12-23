@@ -61,3 +61,10 @@ inner join
 -- details of employee
 select count(*)
 from employee_demographics;
+
+update employee_salary
+set salary = 0
+where salary is null;
+
+select *
+from employee_salary;
