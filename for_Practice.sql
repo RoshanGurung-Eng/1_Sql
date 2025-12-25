@@ -68,3 +68,7 @@ where salary is null;
 
 select *
 from employee_salary;
+
+select * 
+from employee_demographics
+where first_name ;
