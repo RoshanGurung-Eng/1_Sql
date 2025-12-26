@@ -18,3 +18,9 @@ where occupation like "%manager"
 group by occupation
 having avg(salary) > 56000
 ;
+
+select gender, avg(age)
+from employee_demographics
+group by gender
+having  avg(age) > 40
+;
