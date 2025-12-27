@@ -10,3 +10,6 @@ FROM parks_and_recreation.employee_demographics;
 # PEMDAS
 select distinct first_name,gender
 FROM parks_and_recreation.employee_demographics;
+
+select * 
+from parks_departments
