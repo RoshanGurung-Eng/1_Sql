@@ -12,4 +12,7 @@ select distinct first_name,gender
 FROM parks_and_recreation.employee_demographics;
 
 select * 
-from parks_departments
+from parks_departments;
+
+select department_name
+from parks_departments;
