@@ -16,3 +16,7 @@ from parks_departments;
 
 select department_name
 from parks_departments;
+
+select *
+from employee_salary
+where salary < 50000;
