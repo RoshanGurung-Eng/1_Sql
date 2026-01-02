@@ -17,6 +17,6 @@ from parks_departments;
 select department_name
 from parks_departments;
 
-select salary
+select salary, first_name
 from employee_salary
 where salary < 50000;
