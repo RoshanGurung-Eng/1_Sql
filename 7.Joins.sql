@@ -49,3 +49,10 @@ left  join parks_departments as pd
     
 select *
 from parks_departments;
+
+
+select *
+from employee_demographics as d
+inner join employee_salary as s
+	on d.employee_id = s.employee_id
+    ;
