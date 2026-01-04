@@ -56,3 +56,11 @@ from employee_demographics as d
 inner join employee_salary as s
 	on d.employee_id = s.employee_id
     ;
+    
+select *
+from employee_demographics as d
+inner join employee_salary as s
+	on d.employee_id = s.employee_id
+left  join parks_departments as pd
+	ON 	s.dept_id = pd.department_id
+;
