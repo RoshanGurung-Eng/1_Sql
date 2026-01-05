@@ -121,10 +121,5 @@ join layoffs_staging2 t2
 where (t1.industry is null or t1.industry = '')
 and t2.industry is not null;
 
-update layoffs_staging2 t1
-join layoffs_staging2 t2
-	on t1.company = t2.company
-set t1.industry = t2.industry
-where (t1.industry is null or t1.industry = '')
-and t2.industry is not null;
+
 
