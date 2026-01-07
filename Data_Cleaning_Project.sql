@@ -113,6 +113,7 @@ select *
 from layoffs_staging2
 where company = 'Appsmith'
 ;
+-- still error
 
 select t1.industry, t2.industry 
 from layoffs_staging2 t1
