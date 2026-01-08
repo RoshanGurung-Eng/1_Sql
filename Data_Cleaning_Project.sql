@@ -111,7 +111,7 @@ where industry = '';
 
 select *
 from layoffs_staging2
-where company = 'Appsmith'
+where company = "Appsmith"
 ;
 -- still error
 
