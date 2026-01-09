@@ -19,3 +19,11 @@ select first_name, last_name, 'Highly paid employee' as label
 from employee_salary
 where salary>70000
 order by first_name, last_name;
+
+
+-- practise
+select first_name
+from employee_demographics
+union all
+select first_name
+from employee_salary;
