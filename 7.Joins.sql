@@ -50,6 +50,7 @@ left  join parks_departments as pd
 select *
 from parks_departments;
 
+-- practising
 
 select *
 from employee_demographics as d
@@ -64,3 +65,18 @@ inner join employee_salary as s
 left  join parks_departments as pd
 	ON 	s.dept_id = pd.department_id
 ;
+
+-- outer joins
+
+
+select *
+from employee_demographics as dem
+left join employee_salary as sal
+	on dem.employee_id = sal.employee_id
+    ;
+
+select*
+from employee_demographics as dem
+right join employee_salary as sal
+	on dem.employee_id = sal.employee_id
+    ;
