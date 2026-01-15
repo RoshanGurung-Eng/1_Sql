@@ -22,4 +22,14 @@ where salary >= 60000;
 
 select *
 from table_over_60k
+;
 
+-- practise 
+
+create  temporary table table_over_50k
+select *
+from employee_salary
+where salary >= 50000;
+
+select *
+from table_over_50k
