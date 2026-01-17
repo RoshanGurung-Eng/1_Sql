@@ -50,3 +50,7 @@ FROM employee_demographics;
 select first_name, last_name,
 concat (first_name,"",last_name) as fullname
 from employee_demographics;
+
+-- practising
+select first_name, locate('a',first_name)
+FROM employee_demographics;
