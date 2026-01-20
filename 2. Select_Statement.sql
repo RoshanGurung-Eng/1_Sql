@@ -20,3 +20,11 @@ from parks_departments;
 select salary, first_name
 from employee_salary
 where salary < 50000;
+
+-- practise
+SELECT first_name, 
+last_name,
+birth_date,
+age,
+2 * (age + 10) + 2 as Age_Mul
+FROM parks_and_recreation.employee_demographics;
