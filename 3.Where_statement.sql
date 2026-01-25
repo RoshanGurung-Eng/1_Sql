@@ -48,3 +48,7 @@ select *
 from employee_demographics
 where birth_date like "1980%";
 
+select *
+from employee_demographics
+where first_name like "%a%";
+
