@@ -63,3 +63,21 @@ group by gender
 select * 
 from CTE_Example
 ;
+-- practise with multiple cte
+with CTE_Example as 
+(
+select employee_id, gender,birth_date
+from employee_demographics
+where birth_date > "1985-01-01"
+),
+CTE_Example2 as
+(
+select employee_id, salary
+from employee_salary
+where salary > 50000
+)
+select *
+from CTE_Example as e1
+join CTE_Example2 as e2
+	on e1.employee_id = e2.employee_id
+;
