@@ -32,4 +32,16 @@ from employee_salary
 where salary >= 50000;
 
 select *
-from table_over_50k
+from table_over_50k;
+
+create temporary table Detail
+( First_name varchar(50),
+last_name varchar(50),
+fav_actress_movie varchar(100)
+);
+
+insert into Detail
+values('Boban', 'Marley', 'Obese');
+
+select * 
+from Detail;
