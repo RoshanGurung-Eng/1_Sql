@@ -24,6 +24,15 @@ end as new_salary,
 	end as bonus
 FROM employee_salary;
 
+-- practice
+select first_name, last_name, age,
+CASE 
+	WHEN age <=30 then 'young'
+    when age between 31 and 50 then 'Old'
+    when age > 50 then "On Death's Door"
+end as age_bracket
+from employee_demographics;
+
 
 
 
