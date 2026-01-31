@@ -33,6 +33,16 @@ CASE
 end as age_bracket
 from employee_demographics;
 
+select first_name, last_name, salary, 
+case 
+	when salary < 50000 then salary + (salary * 5 / 100) 
+	when salary > 50000 then salary + (salary * 7 / 100)
+end as new_salary,
+	case 
+    when dept_id = 6 then salary * .10
+	end as bonus
+FROM employee_salary;
+
 
 
 
