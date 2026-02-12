@@ -44,5 +44,9 @@ select *
 from employee_demographics
 order by 5 ,4   
 ;
+select occupation, salary
+from employee_salary
+group by occupation, salary
+;
 
 
