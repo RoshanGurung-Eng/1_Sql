@@ -12,7 +12,7 @@ select avg(avg_sal)
 from CTE_Example
 ;
 
--- subquery examply which is difficult to read
+-- subquery example which is difficult to read
 select avg(avg_sal)
 from (select gender, avg(salary) as avg_sal, max(salary) max_salary, min(salary) min_salary, count(salary) salary_count
 from employee_demographics as dem
