@@ -113,3 +113,9 @@ from employee_demographics
 union all
 select first_name
 from employee_salary;
+
+-- where
+select *
+from employee_demographics
+WHERE birth_date > '1985-01-01'
+OR NOT gender = "male";
