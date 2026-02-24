@@ -119,3 +119,11 @@ select *
 from employee_demographics
 WHERE birth_date > '1985-01-01'
 OR NOT gender = "male";
+
+-- stored_procedure
+create procedure large_salaries()
+select * 
+from employee_salary
+where salary >= 50000;
+
+call large_salaries();
