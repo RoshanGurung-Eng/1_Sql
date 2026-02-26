@@ -141,3 +141,14 @@ BEGIN
 END $$
 DELIMITER ;
 call large_salaries2()
+
+Delimiter $$
+create procedure large_salaries3(p_employee_id int)
+BEGIN
+	select salary 
+	from employee_salary
+	where employee_id = p_employee_id;
+	
+END $$
+DELIMITER ;
+call large_salaries3(1);
