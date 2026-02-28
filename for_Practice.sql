@@ -154,7 +154,24 @@ DELIMITER ;
 call large_salaries3(1);
 
 -- event 
-create event employee_retires
+delimiter $$
+create trigger employee_insert
+	after insert on employee_salary
+    for each row
+begin
+	insert into employee_demographics (employee_id, first_name, last_name)
+    value (new.employee_id, new.first_name, new.last_name);
+end $$
+delimiter ;
+insert into employee_salary( employee_id, first_name, last_name, occupation, salary, dept_id)
+values(13, 'Robin', 'Hood', "Spy", '100000', null);
+
+-- Events
+ select * 
+ from employee_demographics;
+ 
+ delimiter $$ 
+ create event employee_retires
  on schedule every 30 second
  do 
  begin 
@@ -165,3 +182,6 @@ create event employee_retires
  delimiter ;
  
  show variables like 'event%'
+ 
+ 
+ 
