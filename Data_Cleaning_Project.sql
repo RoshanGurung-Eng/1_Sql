@@ -115,12 +115,7 @@ where company = "Appsmith"
 ;
 -- still error
 
-select t1.industry, t2.industry 
-from layoffs_staging2 t1
-join layoffs_staging2 t2
-	on t1.company = t2.company
-where (t1.industry is null or t1.industry = '')
-and t2.industry is not null;
+
 
 
 
