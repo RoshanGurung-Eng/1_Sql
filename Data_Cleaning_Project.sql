@@ -113,7 +113,11 @@ select *
 from layoffs_staging2
 where company = "Appsmith"
 ;
--- still error
+
+insert into layoffs_staging2
+select *,
+row_number() over(partition by company, location, industry, total_laid_off, percentage_laid_off, `date`, country, funds_raised ) as row_num
+from layoffs_staging;
 
 
 
