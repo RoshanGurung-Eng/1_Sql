@@ -124,5 +124,8 @@ from layoffs_staging2
 where company = "Apps"
 ;
 
+select * 
+from layoffs_staging2;
+
 
 
