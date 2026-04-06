@@ -82,8 +82,12 @@ inner join employee_salary as sal
 	on dem.employee_id = sal.employee_id
     ;
     
+-- joining multiple tables
 select *
 from employee_demographics as dem
-left join employee_salary as sal
+inner join employee_salary as sal
 	on dem.employee_id = sal.employee_id
-    ;
+left  join parks_departments as pd
+	ON 	sal.dept_id = pd.department_id
+;
+    
